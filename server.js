@@ -7,7 +7,7 @@ var app = express();
 
 hbs.registerPartials(__dirname + '/partials');
 app.set('view engine', 'hbs');
-
+/*
 app.use((request, response, next) => {
     response.render('maintenance.hbs', {
         pageTitle: 'Maintenance Page',
@@ -15,7 +15,7 @@ app.use((request, response, next) => {
         screamMessage: 'Stop screaming!'
     });
 });
-
+*/
 app.use((request, response, next) => {
     var now = new Date().toString();
     var log = `${now}: ${request.method} ${request.url}`;
